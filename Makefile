@@ -38,7 +38,8 @@ clean:
 deps:
 	opam install \
 		utop dune bark \
-		js_of_ocaml js_of_ocaml-compiler js_of_ocaml-ppx
+		js_of_ocaml js_of_ocaml-compiler js_of_ocaml-ppx \
+		menhir
 
 .PHONY: loc
 loc:
