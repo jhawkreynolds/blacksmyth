@@ -1,3 +1,19 @@
+# Blacksmyth
+
+Blacksmyth is an extension to the Smyth project that supports
+finding and resynthesizing library functions in incomplete programs.
+
+Blacksmyth aims to support a library file containing function headings left undefined.
+If a target program is found to have used one of the functions within the library,
+Blacksmyth will reintroduce the function as a sketch within the code.
+Blacksmyth will then call the Smyth toolchain to attempt to repair the program
+and render it usable again.
+
+We would like to credit [the original Smyth team](https://github.com/UChicago-PL/smyth)
+for the baseline program synthesis tool
+and [David Broman](https://github.com/david-broman/ocaml-examples)
+for his very helpful tutorials and sample code on lexing and parsing in OCaml.
+
 # Smyth
 
 Smyth is a program synthesizer that will fill in "holes" in a program in a
