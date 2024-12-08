@@ -1,0 +1,5 @@
+Num n
+Add x y
+Sub x y
+Mul x y
+Hole
