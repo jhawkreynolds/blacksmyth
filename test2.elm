@@ -1,38 +1,28 @@
-type Nat = Z () | S Nat
+type Nat     = Z () | S Nat
 type NatList = Nil () | Cons (Nat, NatList)
+type Cmp     = LT () | EQ () | GT ()
 
-type NatTree = Leaf () | Node (NatTree, Nat, NatTree)
 
-append : NatList -> NatList -> NatList
-append xs ys =
+insert : NatList -> Nat -> NatList
+insert xs n =
   case xs of
     Nil _ ->
-      ys
+      [n]
+
     Cons (head, tail) ->
-      Cons (head, append tail ys)
+      case compare head n of
+        LT y1 -> 
+          Cons (head, insert tail n)
 
-leaves : NatTree -> NatList
-leaves tree =
-  case tree of
-    Leaf _ ->
-      []
+        GT y1 -> 
+          Cons (n, xs)
 
-    Node (left, x, right) ->
-      ??
+        EQ y1 -> 
+          xs
 
-specifyFunction leaves
-  [ ( Node
-        ( Node (Leaf (), 10, Leaf ())
-        , 20
-        , Leaf ()
-        )
-    , [10, 20]
-    )
-  , ( Node
-        ( Leaf ()
-        , 10
-        , Node (Leaf (), 20, Leaf ())
-        )
-    , [10, 20]
-    )
+specifyFunction2 insert
+  [ ([1], 1, [1])
+  , ([1], 2, [1, 2])
+  , ([2], 0, [0, 2])
+  , ([1, 2, 4], 3, [1, 2, 3, 4])
   ]

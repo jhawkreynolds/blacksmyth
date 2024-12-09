@@ -4,17 +4,14 @@
   exception Error of char
 }
 
-let foo = "max"
-let bar = "min"
+let funcs = "max" | "min" | "compare" | "plus"
 let ws = [' ' '\t']
 let wsn = [' ' '\t' '\n']
 let wslpar = ws | ['(']
 let wsnrpar = wsn | [')']
 
 rule token = parse
-   | wslpar foo wsnrpar as lxm
-       { FUNC(lxm) }
-   | wslpar bar wsnrpar as lxm
+   | wslpar funcs wsnrpar as lxm
        { FUNC(lxm) }
    |  wsn
        { token lexbuf }
