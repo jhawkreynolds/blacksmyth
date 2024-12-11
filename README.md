@@ -14,6 +14,10 @@ for the baseline program synthesis tool
 and [David Broman](https://github.com/david-broman/ocaml-examples)
 for his very helpful tutorials and sample code on lexing and parsing in OCaml.
 
+Blacksmyth was developed for
+[EECS 700: Introduction to Program Synthesis](https://sankhs.com/eecs700/)
+at [the University of Kansas](https://ku.edu/) for the Fall 2024 semester.
+
 Further commit history can be found [here](https://github.com/jhawkreynolds/blacksmythparser).
 
 The remainder of this README details installation steps for Smyth.
