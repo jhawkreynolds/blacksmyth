@@ -4,7 +4,7 @@
   exception Error of char
 }
 
-let funcs = "max" | "min" | "compare" | "plus"
+let funcs = "max" | "min" | "compare" | "plus" | "append"
 let ws = [' ' '\t']
 let wsn = [' ' '\t' '\n']
 let wslpar = ws | ['(']
