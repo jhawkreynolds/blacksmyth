@@ -1,8 +1,19 @@
-cat test.elm >extract/test.elm
-cat test.elm >type/test.elm
-cat test.elm >other/test.elm
+oldProgram=$1
+changelog=$2
+oracle=$3
+
+changelog_path="../$changelog"
+
+{ cat $oldProgram; echo ' '; python3 assertionGen.py $3; } >program.elm
+
+program="program.elm"
+
+cat $program >extract/test.elm
+cat $program >type/test.elm
+cat $program >other/test.elm
 
 cd extract
+python3 genLexer.py $changelog_path
 make
 cat test.elm | ./main.native >../funcs.elm
 rm test.elm
