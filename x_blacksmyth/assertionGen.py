@@ -1,4 +1,4 @@
-import sys, inspect, ast, importlib.util, itertools, random
+import sys, inspect, importlib.util, itertools, random
 
 def generate_variations(bound, length):
     variations = list(itertools.product(range(bound+1), repeat=length))

@@ -1,33 +1,14 @@
 type Nat = Z () | S Nat
 type NatList = Nil () | Cons (Nat, NatList)
-type NatTree = Leaf ()| Node (NatTree, Nat, NatTree)
 
-append : NatList -> NatList -> NatList
-append xs ys =
+max : Nat -> Nat -> Nat
+max a b =
     ??
 
 
-leaves : NatTree -> NatList
-leaves tree =
-  case tree of
-    Leaf _ ->
-      []
-    Node (left, x, right) ->
-      append (leaves left) (Cons (x, leaves right))
-specifyFunction leaves
-  [ ( Node
-        ( Node (Leaf (), 10, Leaf ())
-        , 20
-        , Leaf ()
-        )
-    , [10, 20]
-    )
-  , ( Node
-        ( Leaf ()
-        , 10
-        , Node (Leaf (), 20, Leaf ())
-        )
-    , [10, 20]
-    )
-  ]
+maxplus : Nat -> Nat -> Nat
+maxplus m n =
+    S ( max m n )
+ 
+specifyFunction2 maxplus[(0, 1, 2), (1, 2, 3), (2, 1, 3), (0, 0, 1), (3, 1, 4), (1, 1, 2), (0, 3, 4), (2, 0, 3), (3, 0, 4), (2, 3, 4), (0, 2, 3), (3, 3, 4), (2, 2, 3), (1, 0, 2), (3, 2, 4), (1, 3, 4)]
 
