@@ -16,7 +16,10 @@ for his very helpful tutorials and sample code on lexing and parsing in OCaml.
 
 Blacksmyth was developed for
 [EECS 700: Introduction to Program Synthesis](https://sankhs.com/eecs700/)
-at [the University of Kansas](https://ku.edu/) for the Fall 2024 semester.
+at [the University of Kansas](https://ku.edu/) during the Fall 2024 semester
+by [jhawkreynolds](https://github.com/jhawkreynolds),
+[Nerdabelle](https://github.com/Nerdabelle),
+and [IanHarris34](https://github.com/IanHarris34).
 
 Further commit history can be found [here](https://github.com/jhawkreynolds/blacksmythparser).
 
