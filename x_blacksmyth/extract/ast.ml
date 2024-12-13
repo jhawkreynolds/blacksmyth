@@ -6,7 +6,8 @@ type expr =
  | EFunc   of string
 
 let rec pprint_header = function
- | "max" -> sprintf "max : Nat -> Nat -> Nat\n" ^ "max a b =\n" ^ "    ??\n"
+ | "plus" -> sprintf "plus : Nat -> Nat -> Nat\n" ^ "plus a b =\n" ^ "    ??\n"
+ | "minus" -> sprintf "minus : Nat -> Nat -> Nat\n" ^ "minus a b =\n" ^ "    ??\n"
  | _ -> sprintf "error: function unknown"
 
 let rec pprint_expr = function

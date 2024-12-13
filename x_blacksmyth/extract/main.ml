@@ -26,6 +26,7 @@ let main =
        exit 1
     | Parser.Error ->
        fprintf stderr "Parse error at line %d:\n" lexbuf.lex_curr_p.pos_lnum;
+       fprintf stderr "Double check that your program file does include a function used in the changelog.\n";
        exit 1
   in
     let _ = res in

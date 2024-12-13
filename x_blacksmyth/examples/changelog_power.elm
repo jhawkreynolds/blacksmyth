@@ -1,0 +1,1 @@
+mult : Nat -> Nat -> Nat

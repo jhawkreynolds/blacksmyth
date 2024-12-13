@@ -18,9 +18,12 @@ main:
 rec_expr:
   | e1 = expr e2 = rec_expr
     { e1 @ e2 }
+    (* Append leaves together. *)
   | e = expr
     { e }
+    (* Pass a leaf up. *)
 
 expr:
   | f = FUNC
     { [EFunc(f)] }
+    (* Create a singleton list at the leaf. *)
