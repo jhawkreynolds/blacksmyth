@@ -1,0 +1,3 @@
+plus : Nat -> Nat -> Nat
+
+minus : Nat -> Nat -> Nat
